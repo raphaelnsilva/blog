@@ -34,9 +34,9 @@ export const useInsertDocument = (docCollection) => {
 
   const checkCancelBeforeDispatch = (action) => {
     if(!cancelled) {
-      dispatch(action)
+      dispatch(action);
     }
-  }
+  };
 
   const insertDocument = async(document) => {
 
