@@ -14,9 +14,15 @@ const Home = () => {
   const [query, setQuery] = useState("");
   const {documents: posts, loading} = useFetchDocuments("posts");
 
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
-    e.preventDefault()
-  }
+    e.preventDefault(); 
+
+    if (query) {
+      return navigate(`/search?q=${query}`);
+    }
+  };
 
   return (
     <div className={styles.home}>
