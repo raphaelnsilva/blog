@@ -24,6 +24,8 @@ import EditPost from './pages/EditPost/EditPost';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
+
+
 function App() {
 
   // VALIDAÇÃO DE USUARIO LOGADO.

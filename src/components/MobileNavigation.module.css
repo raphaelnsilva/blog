@@ -1,0 +1,18 @@
+.container {
+  
+}
+
+.brand {
+  font-size: 1.2em;
+}
+
+.brand span {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.links_list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
