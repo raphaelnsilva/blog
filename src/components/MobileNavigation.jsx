@@ -32,61 +32,61 @@ const MobileNavigation = () => {
                       
   return (
     <nav className={classes.MobileNavigation}>
-      <div className={styles.container}>
+      <div className={styles.header}>
         <NavLink to="/" className={styles.brand}>
         <span>BLOG</span>
         </NavLink>
         {open ? closeIcon : hamburgerIcon }
-        {open && (
-          <>
-            <ul className={styles.links_list}>
-            <li>
-              <NavLink to="/" className={({isActive}) => (isActive ? styles.active : "")}>
-                Home
-              </NavLink>
-            </li>
-            {!user && (
-              <>
-                <li>
-                  <NavLink to="/login" className={({isActive}) => (isActive ? styles.active : "")}>
-                    Entrar
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/register" className={({isActive}) => (isActive ? styles.active : "")}>
-                    Cadastrar
-                  </NavLink>
-                </li>
-              </>
-            )}
-            {user && (
-              <>
-                <li>
-                  <NavLink to="/posts/create" className={({isActive}) => (isActive ? styles.active : "")}>
-                    Novo post
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/dashboard" className={({isActive}) => (isActive ? styles.active : "")}>
-                    Dashboard
-                  </NavLink>
-                </li>
-              </>
-            )}
-            <li>
-              <NavLink to="/about" className={({isActive}) => (isActive ? styles.active : "")}>
-                Sobre
-              </NavLink>
-            </li>
-            {user && (
-              <li>
-                <button onClick={logout}>Sair</button>
-              </li>
-            )}
-          </ul>
-          </>
-        )}
       </div>
+      {open && (
+        <>
+          <ul className={styles.links_list}>
+          <li>
+            <NavLink to="/" className={({isActive}) => (isActive ? styles.active : "")}>
+              Home
+            </NavLink>
+          </li>
+          {!user && (
+            <>
+              <li>
+                <NavLink to="/login" className={({isActive}) => (isActive ? styles.active : "")}>
+                  Entrar
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/register" className={({isActive}) => (isActive ? styles.active : "")}>
+                  Cadastrar
+                </NavLink>
+              </li>
+            </>
+          )}
+          {user && (
+            <>
+              <li>
+                <NavLink to="/posts/create" className={({isActive}) => (isActive ? styles.active : "")}>
+                  Novo post
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/dashboard" className={({isActive}) => (isActive ? styles.active : "")}>
+                  Dashboard
+                </NavLink>
+              </li>
+            </>
+          )}
+          <li>
+            <NavLink to="/about" className={({isActive}) => (isActive ? styles.active : "")}>
+              Sobre
+            </NavLink>
+          </li>
+          {user && (
+            <li>
+              <button onClick={logout}>Sair</button>
+            </li>
+          )}
+        </ul>
+        </>
+      )}
     </nav>
   
   )
