@@ -38,36 +38,22 @@ const MobileNavigation = () => {
         {open && (
           <>
             <ul className={classes.menu}>
-              <li> 
-                <NavLink to="/" onClick={() => setOpen(!open)}>Home</NavLink>
-              </li>
+              <NavLink to="/" onClick={() => setOpen(!open)}><li>Home</li></NavLink>
               {!user && (
-                <>
-                  <li>
-                    <NavLink to="/login" onClick={() => setOpen(!open)}>Entrar</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/register" onClick={() => setOpen(!open)}>Cadastrar</NavLink>
-                  </li>
+                <> 
+                  <NavLink to="/login" onClick={() => setOpen(!open)}><li>Entrar</li></NavLink>
+                  <NavLink to="/register" onClick={() => setOpen(!open)}><li>Cadastrar</li></NavLink>
                 </>
               )}
               {user && (
                 <>
-                  <li>
-                    <NavLink to="/posts/create" onClick={() => setOpen(!open)}>Novo post</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/dashboard" onClick={() => setOpen(!open)}>Dashboard</NavLink>
-                  </li>
+                  <NavLink to="/posts/create" onClick={() => setOpen(!open)}><li>Novo post</li></NavLink>
+                  <NavLink to="/dashboard" onClick={() => setOpen(!open)}><li>Dashboard</li></NavLink>
                 </>
               )}
-              <li>
-                <NavLink to="/about" onClick={() => setOpen(!open)}>Sobre</NavLink>
-              </li>
+              <NavLink to="/about" onClick={() => setOpen(!open)}><li>Sobre</li></NavLink>
               {user && (
-                <li>
-                  <button onClick={logout}>Sair</button>
-                </li>
+                <NavLink onClick={logout}><li>Sair</li></NavLink>
               )}
             </ul>
           </>
