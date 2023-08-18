@@ -17,13 +17,13 @@ const MobileNavigation = () => {
 
   const openIcon = <PiEyeClosedBold 
     className={classes.menuIcon}
-    size='30px' 
+    size='25px' 
     onClick={() => setOpen(!open)}
   />
 
   const closeIcon = <PiEyeBold
     className={classes.closeIcon}
-    size='30px'
+    size='25px'
     onClick={() => setOpen(!open)}
   />
 

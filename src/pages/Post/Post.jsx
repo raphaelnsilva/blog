@@ -1,4 +1,6 @@
 import styles from "./Post.module.css";
+import { Link } from "react-router-dom";
+import {IoIosArrowRoundBack} from "react-icons/io"
 
 // hooks
 import { useParams } from "react-router-dom";
@@ -17,12 +19,15 @@ const Post = () => {
         <>
           <h1>{post.title}</h1>
           <img src={post.image} alt={post.title} />
-          <p>{post.body}</p>
+          <p className={styles.text}>{post.body}</p>
           <h3>Este post trata sobre:</h3>
           <div className={styles.tags}>
             {post.tagsArray.map((tag) => (
               <p key={tag}><span>#</span>{tag}</p>
             ))}
+          </div>
+          <div className="backBtn">
+            <Link to="/dashboard"><IoIosArrowRoundBack/>Voltar</Link>
           </div>
         </>
       )}

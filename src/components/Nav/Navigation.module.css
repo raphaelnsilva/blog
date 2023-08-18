@@ -41,6 +41,7 @@
 
   .Navbar .header {
     display: flex;
+    padding: 1em 2em;
   }
 
   .MobileNavigation ul, li, button {

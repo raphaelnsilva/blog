@@ -1,6 +1,6 @@
-import MobileNavigation from './Nav/MobileNavigation'
-import Navigation from './Nav/Navigation'
-import classes from "./Nav/Navigation.module.css"
+import MobileNavigation from './MobileNavigation'
+import Navigation from './Navigation'
+import classes from "./Navigation.module.css"
 
 const Navbar = () => {
 

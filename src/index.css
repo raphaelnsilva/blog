@@ -106,3 +106,8 @@ button[disable] {
   padding: 5px;
   border-radius: 5px;
 }
+
+.backBtn {
+  text-decoration: underline;
+  margin-top: 2rem;
+}
