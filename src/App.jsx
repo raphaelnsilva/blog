@@ -52,7 +52,7 @@ function App() {
           <Navbar />
           <div className="container">
             <Routes>
-              <Route path='/home' element={<Home />} />
+              <Route path='/' element={<Home />} />
               <Route path='/about' element={<About />} />
               <Route path='/search' element={<Search />} />
               <Route path='/posts/:id' element={<Post />} />
