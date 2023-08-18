@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useFetchDocuments } from '../../hooks/useFetchDocuments';
 
 //components
-import PostDetail from '../../components/PostDetail';
+import PostDetail from '../../components/PostDetail/PostDetail';
 
 
 const Home = () => {

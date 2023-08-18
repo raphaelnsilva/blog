@@ -1,10 +1,12 @@
 import styles from './EditPost.module.css';
 import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, Link } from 'react-router-dom';
 import { useAuthValue } from '../../context/AuthContext';
 import { useFetchDocument } from '../../hooks/useFetchDocument';
 import { useUpdateDocument } from '../../hooks/useUpdateDocument';
 import { updateDoc } from 'firebase/firestore';
+
+import {IoIosArrowRoundBack} from "react-icons/io"
 
 
 const EditPost = () => {
@@ -103,6 +105,9 @@ const EditPost = () => {
             {response.loading && <button className='btn' disable>Aguarde...</button>}
             {response.error && <p className='error'>{response.error}</p>}
             {formError && <p className='error'>{formError}</p>}
+            <div className="backBtn">
+              <Link to="/dashboard"><IoIosArrowRoundBack/>Voltar</Link>
+            </div>
           </form>
         </>
       )}

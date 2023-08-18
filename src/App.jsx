@@ -21,8 +21,10 @@ import Post from './pages/Post/Post';
 import EditPost from './pages/EditPost/EditPost';
 
 // COMPONENTS
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Navbar from './components/Nav/Navbar';
+import Footer from './components/Footer/Footer';
+
+
 
 function App() {
 
