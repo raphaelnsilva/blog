@@ -1,73 +1,76 @@
-import {GiHamburgerMenu} from 'react-icons/gi';
+import {PiEyeClosedBold} from 'react-icons/pi';
+import {PiEyeBold} from 'react-icons/pi';
+
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import {useAuthentication} from '../../hooks/useAutentication';
 import {useAuthValue} from '../../context/AuthContext';
 
-import styles from './MobileNavigation.module.css'
-
-import { useState } from 'react';
+import classes from './Navigation.module.css';
 
 const MobileNavigation = () => {
-
-  const [active, setActive] =useState(false);
 
   const { user } = useAuthValue();
   const { logout } = useAuthentication();
 
+  const [open, setOpen] = useState(false);
+
+  const openIcon = <PiEyeClosedBold 
+    className={classes.menuIcon}
+    size='30px' 
+    onClick={() => setOpen(!open)}
+  />
+
+  const closeIcon = <PiEyeBold
+    className={classes.closeIcon}
+    size='30px'
+    onClick={() => setOpen(!open)}
+  />
+
   return (
-    <nav>
-      <GiHamburgerMenu onClick={() => StereoPannerNode(!open)}/>
-      <ul>
-        <li>
-          <NavLink to="/">
-            Home
-          </NavLink>
-        </li>
-
-        {/* Se NÃO estiver logado */}
-        {!user && (
+    <header className={classes.header}>
+      <NavLink to="/" className={classes.brand}><span>BLOG</span></NavLink>
+      <nav className={classes.MobileNavigation}>
+        {open ? closeIcon : openIcon}
+        {open && (
           <>
-            <li>
-              <NavLink to="/login">
-                Entrar
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/register">
-                Cadastrar
-              </NavLink>
-            </li>
+            <ul className={classes.menu}>
+              <li> 
+                <NavLink to="/" onClick={() => setOpen(!open)}>Home</NavLink>
+              </li>
+              {!user && (
+                <>
+                  <li>
+                    <NavLink to="/login" onClick={() => setOpen(!open)}>Entrar</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/register" onClick={() => setOpen(!open)}>Cadastrar</NavLink>
+                  </li>
+                </>
+              )}
+              {user && (
+                <>
+                  <li>
+                    <NavLink to="/posts/create" onClick={() => setOpen(!open)}>Novo post</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/dashboard" onClick={() => setOpen(!open)}>Dashboard</NavLink>
+                  </li>
+                </>
+              )}
+              <li>
+                <NavLink to="/about" onClick={() => setOpen(!open)}>Sobre</NavLink>
+              </li>
+              {user && (
+                <li>
+                  <button onClick={logout}>Sair</button>
+                </li>
+              )}
+            </ul>
           </>
         )}
-
-        {/* Se ESTIVER logado */}
-        {user && (
-          <>
-            <li>
-              <NavLink to="/posts/create">
-                Novo post
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/dashboard">
-                Dashboard
-              </NavLink>
-            </li>
-          </>
-        )}
-        <li>
-          <NavLink to="/about">
-            Sobre
-          </NavLink>
-        </li>
-        {user && (
-          <li>
-            <button onClick={logout}>Sair</button>
-          </li>
-        )}
-      </ul>
-      
-    </nav>
+      </nav>
+    </header>
   )
 }
 
