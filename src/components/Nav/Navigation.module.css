@@ -38,20 +38,8 @@
 }
 
 @media (max-width: 990px) {
-
   .Navbar .Navigation {
     display: none;
   }
-
-  .Navbar .MobileNavigation {
-    display: block;
-  }
-
-  .Navbar .MobileNavigation .Hamburger {
-    position: absolute;
-    right: 5%;
-    cursor: pointer;
-  }
-
 }
 

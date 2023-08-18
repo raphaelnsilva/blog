@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom'
-
-import {useAuthentication} from '../hooks/useAutentication';
-import {useAuthValue} from '../context/AuthContext';
+import {useAuthentication} from '../../hooks/useAutentication';
+import {useAuthValue} from '../../context/AuthContext';
 
 import styles from './Navigation.module.css';
 import classes from "./Navigation.module.css";

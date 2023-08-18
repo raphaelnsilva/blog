@@ -2,6 +2,12 @@
   text-align: center;
 }
 
+.post_container img{
+  max-width: 400px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 1px #00000065;
+}
+
 .post_container h3 {
   margin-bottom: .2em;
 }
@@ -17,4 +23,12 @@
 
 .tags span {
   font-weight: bold;
+}
+
+@media (min-width: 990px) {
+  .post_container img{
+    max-width: 800px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 1px #00000065;
+  }
 }
