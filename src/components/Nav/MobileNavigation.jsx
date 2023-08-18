@@ -1,5 +1,6 @@
-import {PiEyeClosedBold} from 'react-icons/pi';
-import {PiEyeBold} from 'react-icons/pi';
+import {AiOutlineMenu} from 'react-icons/ai';
+import {IoMdClose} from 'react-icons/io';
+
 
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
@@ -15,17 +16,19 @@ const MobileNavigation = () => {
 
   const [open, setOpen] = useState(false);
 
-  const openIcon = <PiEyeClosedBold 
+  const openIcon = <AiOutlineMenu 
     className={classes.menuIcon}
     size='25px' 
     onClick={() => setOpen(!open)}
   />
 
-  const closeIcon = <PiEyeBold
+  const closeIcon = <IoMdClose
     className={classes.closeIcon}
     size='25px'
     onClick={() => setOpen(!open)}
   />
+
+  
 
   return (
     <header className={classes.header}>
