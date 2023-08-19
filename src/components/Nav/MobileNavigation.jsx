@@ -1,7 +1,7 @@
 import {AiOutlineMenu} from 'react-icons/ai';
 import {IoMdClose} from 'react-icons/io';
 
-
+// hooks
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import {useAuthentication} from '../../hooks/useAutentication';
@@ -10,11 +10,11 @@ import {useAuthValue} from '../../context/AuthContext';
 import classes from './Navigation.module.css';
 
 const MobileNavigation = () => {
+  
+  const [open, setOpen] = useState(false);
 
   const { user } = useAuthValue();
   const { logout } = useAuthentication();
-
-  const [open, setOpen] = useState(false);
 
   const openIcon = <AiOutlineMenu 
     className={classes.menuIcon}
@@ -27,8 +27,6 @@ const MobileNavigation = () => {
     size='25px'
     onClick={() => setOpen(!open)}
   />
-
-  
 
   return (
     <header className={classes.header}>
