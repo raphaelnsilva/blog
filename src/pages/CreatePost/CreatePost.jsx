@@ -1,6 +1,6 @@
 import styles from './CreatePost.module.css';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link, Navigate } from 'react-router-dom';
 import { useAuthValue } from '../../context/AuthContext';
 import { useInsertDocument } from "../../hooks/useInsertDocument";
 
@@ -78,6 +78,7 @@ const CreatePost = () => {
         {response.loading && <button className='btn' disable>Aguarde...</button>}
         {response.error && <p className='error'>{response.error}</p>}
         {formError && <p className='error'>{formError}</p>}
+        
       </form>
     </div>
   )
