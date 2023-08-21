@@ -30,13 +30,13 @@ const MobileNavigation = () => {
 
   return (
     <header className={classes.header}>
-      <NavLink to="/" className={classes.brand}><span>BLOG</span></NavLink>
+      <NavLink to="/blog/" className={classes.brand}><span>BLOG</span></NavLink>
       <nav className={classes.MobileNavigation}>
         {open ? closeIcon : openIcon}
         {open && (
           <>
             <ul className={classes.menu}>
-              <NavLink to="/" onClick={() => setOpen(!open)}><li>Home</li></NavLink>
+              <NavLink to="/blog/" onClick={() => setOpen(!open)}><li>Home</li></NavLink>
               {!user && (
                 <> 
                   <NavLink to="/login" onClick={() => setOpen(!open)}><li>Entrar</li></NavLink>

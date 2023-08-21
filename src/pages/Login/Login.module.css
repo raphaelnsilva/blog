@@ -5,3 +5,25 @@
 .login p {
   color: #aaa;
 }
+
+.informationContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.information {
+  border-radius: 5px;
+  color: white;
+  width: 300px;
+  padding: 10px;
+  background-color: #1a8918;
+  color: #FFF;
+  text-align: center;
+  font-weight: bold;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1em;
+}
+

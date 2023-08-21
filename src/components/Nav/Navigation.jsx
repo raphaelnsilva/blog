@@ -13,12 +13,12 @@ const Navigation = () => {
   return (
       <div className={classes.Navigation}>
         <nav className={styles.navbar}>
-          <NavLink to="/" className={styles.brand}>
+          <NavLink to="/blog/" className={styles.brand}>
             <span>BLOG</span>
           </NavLink>
           <ul className={styles.links_list}>
             <li>
-              <NavLink to="/" className={({isActive}) => (isActive ? styles.active : "")}>
+              <NavLink to="/blog/" className={({isActive}) => (isActive ? styles.active : "")}>
                 Home
               </NavLink>
             </li>

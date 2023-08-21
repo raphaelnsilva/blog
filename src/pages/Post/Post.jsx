@@ -26,9 +26,6 @@ const Post = () => {
               <p key={tag}><span>#</span>{tag}</p>
             ))}
           </div>
-          <div className="backBtn">
-            <Link to="/dashboard"><IoIosArrowRoundBack/>Voltar</Link>
-          </div>
         </>
       )}
     </div>

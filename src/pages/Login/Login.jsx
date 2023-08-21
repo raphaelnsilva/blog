@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react';
 
 const Login = () => {
 
-  const [ email, setEmail ] = useState('');
-  const [ password, setPassword ] = useState('');
+  const [ email, setEmail ] = useState('teste@teste.com');
+  const [ password, setPassword ] = useState('123456');
   const [ error, setError ] = useState('');
   const { login, error: authError, loading } = useAuthentication();
 
@@ -24,6 +24,7 @@ const Login = () => {
       setError(authError)
     }
   }, [authError])
+
 
   return (
     <>
@@ -51,13 +52,17 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </label>
-        
           {!loading && <button className='btn'>Entrar</button>}
           {loading && <button className='btn' disable>Aguarde...</button>}
           {error && <p className='error'>{error}</p>}
         </form>
       </div>
-    </>
+      <div className={styles.informationContainer}>
+        <div className={styles.information}>
+          <p>Este é um email criado para você testar todas as funcioanlidades sem ter que se cadastrar.</p>
+        </div>
+      </div>
+    </> 
   )
 }
 
