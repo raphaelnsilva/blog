@@ -1,2 +1,5 @@
-![image](https://github.com/raphaelnsilva/blog/assets/129803784/1a776e5f-8b89-488f-b6b2-e8d679c6b8f5)
+Este projeto foi desenvolvido por mim, afim de obter
+mais conhecimentos sobre a biblioteca React.
+As principal dependências do projeto é a utilização 
+do <strong>Firebase,</strong> ferramenta do google com diversas funcionalidades,
 
