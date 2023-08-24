@@ -4,4 +4,5 @@ Este projeto foi desenvolvido, a fim de obter mais conhecimentos e solidificar m
 A principal dependências do projeto é a utilização do Firebase, ferramenta do google com diversas funcionalidades. <br>
 O Firebase nos permite hospedas bancos de dados, gerenciar autenticações e integrar a uma variedade de aplicativos. <br>
 
-![image](https://github.com/raphaelnsilva/blog/assets/129803784/bde90331-f116-45c6-9183-b6d897af265a)
+![post do blog](https://github.com/raphaelnsilva/blog/assets/129803784/bde90331-f116-45c6-9183-b6d897af265a)
+![Static Badge](https://img.shields.io/badge/:badgeContent)
